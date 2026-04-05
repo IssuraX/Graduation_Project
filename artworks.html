@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMCA Redesign | Works + Exhibitions</title>
+  <meta name="description" content="전시 소개와 작품 스크롤 갤러리를 하나로 통합한 MMCA 페이지">
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body class="page-shell page-artworks page-exhibitions">
+  <div class="site-backdrop"></div>
+  <header class="site-header" data-reveal="fade-down">
+    <a class="brand" href="index.html" aria-label="MMCA 메인으로 이동">
+      <img src="assets/images/ko_logo.png" alt="MMCA 로고">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">메뉴 열기</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+      <a href="index.html">Main</a>
+      <a href="artworks.html" aria-current="page">Works + Exhibitions</a>
+      <a href="etc.html">Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-frame exhibitions-frame" data-reveal="fade-up">
+      <div class="frame-topline">
+        <span>Room 02</span>
+        <span>Works + Exhibitions</span>
+      </div>
+      <div class="exhibitions-layout">
+        <div class="exhibitions-copy">
+          <p class="eyebrow">Exhibition Overview</p>
+          <h1>전시 서사와 작품 감상이<br>하나의 페이지 안에서 이어지는 구성</h1>
+          <p>
+            기존 전시 페이지의 상단 레이아웃을 입구로 두고, 전시 개요와 공간 정보를 먼저 전달한 뒤
+            아래에서 작품 카드들이 스크롤 동선에 따라 차례대로 등장하도록 통합했습니다.
+          </p>
+          <a class="cta-line" href="#works-archive">작품 갤러리로 이어보기</a>
+        </div>
+        <article class="exhibition-highlight">
+          <div class="exhibit-visual exhibit-visual-installation"></div>
+          <div class="highlight-meta">
+            <strong>Nothing Is True But Everything Is Possible</strong>
+            <span>서울 · Special Hall · 2026</span>
+          </div>
+        </article>
+        <div class="exhibition-column">
+          <article class="poster-card">
+            <div class="poster-visual poster-warm"></div>
+            <h3>빛의 단면들</h3>
+            <p>회화와 조명의 관계를 탐색하는 몰입형 기획전</p>
+          </article>
+          <article class="poster-card">
+            <div class="poster-visual poster-cool"></div>
+            <h3>물의 정원</h3>
+            <p>회화와 영상이 교차하는 감각적 아카이브 전시</p>
+          </article>
+        </div>
+        <article class="exhibition-note">
+          <p class="panel-kicker">Spatial Note</p>
+          <h3>먼저 전시를 읽고, 이어서 작품을 걷는 흐름</h3>
+          <p>
+            상단은 전시 안내판처럼 정리하고, 하단은 작품이 왼쪽과 오른쪽에서 순차적으로 나타나는
+            스크롤 벽면으로 연결해 하나의 관람 동선처럼 보이도록 설계했습니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-frame artworks-frame artworks-journey" id="works-archive" data-reveal="fade-up">
+      <div class="frame-topline">
+        <span>Archive Wall</span>
+        <span>Selected Works Sequence</span>
+      </div>
+
+      <div class="artworks-rail">
+        <aside class="artworks-sticky">
+          <p class="eyebrow">Room 02 · Works Sequence</p>
+          <h1>전시를 읽은 다음<br>작품이 스크롤 리듬에 맞춰<br>하나씩 등장하는 아카이브</h1>
+          <p>
+            한 화면에 모든 카드를 한꺼번에 두기보다, 작품이 실제 전시 동선처럼 차례대로 등장하도록
+            재구성했습니다. 스크롤할수록 콘텐츠가 왼쪽과 오른쪽에서 번갈아 올라오며 리듬을 만듭니다.
+          </p>
+          <a class="text-link" href="etc.html">관람 정보 페이지 보기</a>
+          <div class="side-notes">
+            <span>Painting</span>
+            <span>Installation</span>
+            <span>Media Art</span>
+            <span>Archive</span>
+          </div>
+        </aside>
+
+        <div class="art-sequence">
+          <article class="art-sequence-item align-left" data-scroll-card>
+            <div class="art-sequence-card tone-panel">
+              <p class="panel-kicker">Curatorial Note</p>
+              <h2>작품 정보는 설명문이 아니라<br>전시 캡션처럼 배치</h2>
+              <p>
+                재료, 연도, 키워드, 소장 카테고리를 짧고 선명한 정보 단위로 나누어,
+                읽는 흐름보다 보는 흐름이 먼저 만들어지도록 구성했습니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-right" data-scroll-card>
+            <div class="art-sequence-card media-card large">
+              <div class="art-sequence-media art-sequence-media-monet"></div>
+              <div class="art-sequence-copy">
+                <strong>Water Garden Study</strong>
+                <span>Oil on Canvas · 1917</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-left" data-scroll-card>
+            <div class="art-sequence-card media-card">
+              <div class="art-sequence-media art-sequence-media-installation"></div>
+              <div class="art-sequence-copy">
+                <strong>White Cube Installation</strong>
+                <span>Spatial Documentation · MMCA</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-right" data-scroll-card>
+            <div class="art-sequence-card media-card compact">
+              <div class="art-sequence-media art-sequence-media-skull"></div>
+              <div class="art-sequence-copy">
+                <strong>For the Love of God</strong>
+                <span>2007 · Platinum, Diamond, Skull</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-left" data-scroll-card>
+            <div class="art-sequence-card media-card compact">
+              <div class="art-sequence-media art-sequence-media-sand"></div>
+              <div class="art-sequence-copy">
+                <strong>Light Drift</strong>
+                <span>Mixed Media</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-right" data-scroll-card>
+            <div class="art-sequence-card media-card">
+              <div class="art-sequence-media art-sequence-media-sage"></div>
+              <div class="art-sequence-copy">
+                <strong>Quiet Volume</strong>
+                <span>Sculpture Archive</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-left" data-scroll-card>
+            <div class="art-sequence-card wide-copy">
+              <span class="note-index">Collection Keywords</span>
+              <h2>회화, 설치, 사진, 조각, 뉴미디어,<br>한국 근현대, 국제 동시대, 실험적 아카이브</h2>
+              <p>
+                작품 데이터는 단순 목록이 아니라, 서로 다른 시대와 매체가 한 벽면 안에서
+                대화하는 아카이브로 보이도록 키워드 중심으로 재정렬합니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="art-sequence-item align-right" data-scroll-card>
+            <div class="art-sequence-card media-card large">
+              <div class="art-sequence-media art-sequence-media-detail"></div>
+              <div class="art-sequence-copy">
+                <strong>Suspended Archive</strong>
+                <span>Installation Detail · 2026</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-reveal="fade-up">
+    <div class="site-footer-info">
+      <p class="site-footer-lead">대표자: 김성희, 사업자등록번호: 138-83-00313</p>
+      <div class="site-footer-addresses">
+        <p>대표전화: (서울) 02-3701-9500, 서울시 종로구 삼청로 30(소격동)</p>
+        <p>(과천) 02-2188-6000, 경기도 과천시 광명로 313(막계동)</p>
+        <p>(덕수궁) 02-2022-0600, 서울시 중구 세종대로 99(정동), 덕수궁 내</p>
+        <p>(청주) 043-261-1400, 충북 청주시 청원구 상당로 314(내덕 2동 201-1)</p>
+      </div>
+      <p class="site-footer-note">© 2021 National Museum of Modern and Contemporary Art, Korea</p>
+    </div>
+    <a class="site-footer-brand" href="index.html" aria-label="MMCA 메인으로 이동">
+      <img src="assets/images/ko_logo.png" alt="MMCA 로고">
+    </a>
+  </footer>
+
+  <script src="assets/scripts/main.js"></script>
+</body>
+</html>
