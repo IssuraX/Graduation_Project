@@ -282,7 +282,7 @@ main {
 }
 
 .hero-stage {
-  margin-top: 16px;
+  margin-top: 50px;
   padding: clamp(28px, 4vw, 48px);
   border-radius: 42px;
 }
@@ -857,7 +857,7 @@ main {
 }
 
 .newsletter-media-focus {
-  background-image: url("../images/focus_img_1.png");
+  background-image: url("../images/banner01.jpg");
 }
 
 .newsletter-media-plus {
@@ -1163,7 +1163,7 @@ main {
 .expand-card-water::before {
   background-image:
     linear-gradient(180deg, rgba(22, 20, 19, 0.12), rgba(22, 20, 19, 0.24)),
-    url("../images/footer_banner04.jpg");
+    url("../images/banner-card-06.jpg");
 }
 
 .page-frame {
@@ -1271,7 +1271,7 @@ main {
 
 .art-image-monet {
   min-height: 520px;
-  background-image: url("../images/5_img1.png");
+  background-image: url("../images/banner04.jpg");
 }
 
 .art-image-installation {
@@ -1444,7 +1444,7 @@ main {
 }
 
 .art-sequence-media-monet {
-  background-image: url("../images/5_img1.png");
+  background-image: url("../images/banner04.jpg");
 }
 
 .art-sequence-media-installation {
@@ -1456,15 +1456,11 @@ main {
 }
 
 .art-sequence-media-sand {
-  background:
-    linear-gradient(135deg, rgba(230, 191, 141, 0.48), rgba(110, 65, 50, 0.24)),
-    linear-gradient(35deg, #f4e7d7 0%, #d4c0a5 100%);
+  background-image: url("../images/card003.png");
 }
 
 .art-sequence-media-sage {
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.46), transparent 30%),
-    linear-gradient(135deg, #8f9c88 0%, #e6ddd0 100%);
+  background-image: url("../images/card004.png");
 }
 
 .art-sequence-media-detail {
