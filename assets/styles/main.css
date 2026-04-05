@@ -1167,7 +1167,7 @@ main {
 }
 
 .page-frame {
-  margin-top: 24px;
+  margin-top: 50px;
   padding: clamp(24px, 3vw, 38px);
   border-radius: 36px;
 }
@@ -1585,48 +1585,156 @@ main {
 }
 
 .etc-stage {
-  margin-top: 24px;
+  margin-top: 50px;
   padding: clamp(24px, 3vw, 40px);
   border-radius: 36px;
 }
 
 .etc-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
+  flex-direction: column;
+  gap: 24px;
   margin-top: 26px;
 }
 
 .etc-card {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 30px;
+  border: 1px solid rgba(34, 31, 28, 0.08);
+  background: rgba(251, 246, 238, 0.82);
+  box-shadow: 0 22px 48px rgba(66, 52, 39, 0.06);
+}
+
+.visit-media {
+  flex: 0 0 min(34%, 360px);
+  min-height: 320px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.visit-media-viewing {
+  background-image:
+    linear-gradient(180deg, rgba(19, 16, 13, 0.08), rgba(19, 16, 13, 0.2)),
+    url("../images/time001.jpg");
+}
+
+.visit-media-directions {
+  background-image:
+    linear-gradient(180deg, rgba(19, 16, 13, 0.08), rgba(19, 16, 13, 0.22)),
+    url("../images/time002.jpg");
+}
+
+.visit-media-facility {
+  background-image:
+    linear-gradient(180deg, rgba(19, 16, 13, 0.08), rgba(19, 16, 13, 0.22)),
+    url("../images/time003.jpg");
+}
+
+.visit-media-education {
+  background-image:
+    linear-gradient(180deg, rgba(19, 16, 13, 0.08), rgba(19, 16, 13, 0.22)),
+    url("../images/time004.jpg");
+}
+
+.visit-content {
+  display: flex;
+  flex: 1 1 480px;
   flex-direction: column;
+  gap: 20px;
+  padding: 34px;
+}
+
+.etc-card-directions .visit-content {
+  justify-content: center;
+}
+
+.etc-card-directions {
+  min-height: 538px;
+}
+
+.visit-columns,
+.visit-transit-grid,
+.facility-grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  padding: 28px;
-  min-height: 240px;
 }
 
-.etc-card.membership {
-  flex: 1 1 calc(41.666% - 11px);
-  background: linear-gradient(135deg, rgba(32, 30, 27, 0.98), rgba(81, 73, 64, 0.92));
-  color: #f7f3eb;
+.visit-panel,
+.transit-card,
+.facility-item,
+.facility-highlight {
+  border-radius: 22px;
+  border: 1px solid rgba(34, 31, 28, 0.08);
+  background: rgba(255, 252, 247, 0.8);
 }
 
-.etc-card.membership p,
-.etc-card.membership .card-index {
-  color: rgba(247, 243, 235, 0.78);
+.visit-panel {
+  flex: 1 1 260px;
+  padding: 22px 22px 18px;
 }
 
-.etc-card.visit {
-  flex: 1 1 calc(58.333% - 11px);
+.visit-panel h3,
+.transit-card h3,
+.facility-highlight h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
 }
 
-.etc-card.education,
-.etc-card.archive {
-  flex: 1 1 calc(50% - 11px);
+.visit-note {
+  margin: 0;
+  color: rgba(39, 34, 29, 0.68);
+  font-size: 0.95rem;
+}
+
+.visit-address {
+  margin: -2px 0 0;
+  font-weight: 600;
+}
+
+.transit-card {
+  flex: 1 1 220px;
+  padding: 22px;
+}
+
+.facility-highlight {
+  padding: 22px;
+}
+
+.facility-grid {
+  gap: 14px;
+}
+
+.facility-item {
+  display: flex;
+  flex: 1 1 calc(50% - 7px);
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px;
+}
+
+.facility-item strong {
+  font-size: 0.98rem;
+}
+
+.facility-item span {
+  color: rgba(39, 34, 29, 0.72);
+  line-height: 1.6;
 }
 
 .info-list {
+  margin: 0;
   padding-left: 18px;
+}
+
+.info-list li + li {
+  margin-top: 8px;
 }
 
 .site-footer {
@@ -1794,10 +1902,11 @@ main {
     flex-basis: 100%;
   }
 
-  .etc-card.membership,
-  .etc-card.visit,
-  .etc-card.education,
-  .etc-card.archive {
+  .visit-media,
+  .visit-content,
+  .visit-panel,
+  .transit-card,
+  .facility-item {
     flex-basis: 100%;
   }
 }
