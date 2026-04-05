@@ -98,7 +98,7 @@ body {
 }
 
 .page-home .footer-banner {
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 img {
@@ -202,6 +202,7 @@ main,
 }
 
 .site-nav {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -212,19 +213,38 @@ main,
   backdrop-filter: blur(16px);
 }
 
+.site-nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  border-radius: 999px;
+  background: rgba(145, 109, 68, 0.12);
+  box-shadow: 0 8px 18px rgba(33, 31, 30, 0.08);
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .site-nav a {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 18px;
   border-radius: 999px;
   font-size: 0.92rem;
   color: var(--muted);
-  transition: background var(--transition), color var(--transition), transform var(--transition);
+  transition: color var(--transition);
 }
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
   color: var(--text);
-  background: rgba(145, 109, 68, 0.12);
-  transform: translateY(-1px);
 }
 
 .nav-toggle {
@@ -837,11 +857,11 @@ main {
 }
 
 .newsletter-media-focus {
-  background-image: url("../images/footer_banner01.jpg");
+  background-image: url("../images/focus_img_1.png");
 }
 
 .newsletter-media-plus {
-  background-image: url("../images/footer_banner02.jpg");
+  background-image: url("../images/mipl_img_1.png");
 }
 
 .newsletter-media-story {
@@ -1497,7 +1517,7 @@ main {
   display: flex;
   flex: 1 1 300px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 22px;
 }
 
@@ -1525,7 +1545,7 @@ main {
 .exhibit-visual-installation {
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
-    url("../images/banner01.jpg");
+    url("../images/card002.png");
 }
 
 .exhibition-column {
@@ -1552,15 +1572,11 @@ main {
 }
 
 .poster-warm {
-  background:
-    linear-gradient(180deg, rgba(112, 61, 33, 0.24), rgba(255, 255, 255, 0)),
-    linear-gradient(135deg, #b78056 0%, #efd9bf 100%);
+  background-image: url("../images/card001.png");
 }
 
 .poster-cool {
-  background-image:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)),
-    url("../images/5_img1.png");
+  background-image: url("../images/card005.png");
 }
 
 .exhibition-note {
@@ -1823,6 +1839,10 @@ main {
     transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
   }
 
+  .site-nav-indicator {
+    display: none;
+  }
+
   .site-header.nav-open .site-nav {
     opacity: 1;
     visibility: visible;
@@ -1831,6 +1851,12 @@ main {
 
   .site-nav a {
     text-align: center;
+    border-radius: 999px;
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current="page"] {
+    background: rgba(145, 109, 68, 0.12);
   }
 
   .site-header.nav-open .nav-toggle span:nth-child(1) {
